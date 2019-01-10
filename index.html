@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0.91, maximum-scale=1">
+
+	<link rel="shortcut icon" href="favicon.png">
+	<title>Unknown Visualizer</title>
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="styles.css">
+	<!-- Google 'Roboto' Font -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+
+	<!-- JavaScript -->
+	<script src="script.js"></script>
+</head>
+<body>
+	<h1>unknown visualizer</h1>
+
+	<!-- Start Button -->
+	<button id="start">Press to Begin</button>
+	<!-- Audio Visualizer -->
+	<canvas></canvas>
+
+	<!-- Footer -->
+	<footer>Alex Pasieka & Max Swartwout &copy;2018</footer>
+
+	<!-- Controls -->
+	<div id="controls" class="minimized">
+		<!-- Minimization Bar -->
+		<div id="clickBar">
+			<span id="controlTitle">controls</span>
+			<span id="controlMinimizer">v</span>
+		</div>
+
+		<div class="controlSection">
+			<!-- Control Labels -->
+			<div class="controlLabels">
+				invert<br>
+				waveform<br>
+				reverb<br>
+				dashed line<br>
+				song select<br>
+				color<br>
+				samples<br>
+				line width<br>
+				line intensity<br>
+			</div>
+
+			<!-- Control Inputs -->
+			<div class="controlInputs">
+				<!-- Invert Check -->
+				<label class="checkboxLabel">
+					<input type="checkbox" id="invertCheck" class="controlElement">
+				</label>
+				<br>
+
+				<!-- Waveform Check -->
+				<label class="checkboxLabel">
+					<input type="checkbox" id="waveformCheck" class="controlElement">
+				</label>
+				<br>
+
+				<!-- Reverb Check -->
+				<label class="checkboxLabel">
+					<input type="checkbox" id="reverbCheck" class="controlElement">
+				</label>
+				<br>
+
+				<!-- Dash Check -->
+				<label class="checkboxLabel">
+					<input type="checkbox" id="dashCheck" class="controlElement">
+				</label>
+				<br>
+
+				<!-- Song Select -->
+				<label>
+					<select id="songSelect" class="controlElement" name="song">
+						<option value="yesterday">Yesterday</option>
+						<option value="september">September</option>
+						<option value="take-on-me">Take On Me</option>
+					</select>
+				</label>
+				<br>
+
+				<!-- Color Picker -->
+				<label><span class="controlElement">#</span>
+					<input id="hexPicker" class="controlElement" type="text" value="fff" maxlength="6" spellcheck="false">
+				</label>
+				<br>
+
+				<!-- Sample Select -->
+				<label>
+					<select id="sampleSelect" class="controlElement" name="song">
+					</select>
+				</label>
+				<br>
+
+				<!-- Line Width Slider -->
+				<label>
+					<input id="widthSlider" class="controlElement" type="range" min="1" max="5" value="1">
+				</label>
+				<br>
+
+				<!-- Line Intensity Slider -->
+				<label>
+					<input id="intensitySlider" class="controlElement" type="range" min="1" max="10" value="5">
+				</label>
+			</div>
+
+			<!-- Audio Element -->
+			<audio controls="controls" src="music/yesterday.mp3"></audio>
+		</div>
+	</div>
+</body>
+</html>
